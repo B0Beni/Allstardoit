@@ -52,9 +52,10 @@ with open('form.csv', 'w', newline='') as f:
 with open('form.csv', 'r', newline='') as f:
     reader = csv.DictReader(f, delimiter=';', quoting=csv.QUOTE_NONNUMERIC)
     header = next(reader)
-    print(header)
-    print(reader)
+    # print(header)
+    # print(reader)
     for i in reader:
         for k, v in i.items():
             print(k, v)
-
+# k - ключ 'lastename'
+# v - значение 'Петруха'
