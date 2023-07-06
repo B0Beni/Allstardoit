@@ -1,0 +1,3 @@
+# Эдгар Кодд
+# SQliteStudio
+# $FileDir$
