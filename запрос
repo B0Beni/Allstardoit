@@ -1,0 +1,26 @@
+--SELECT title, genre, duration, year FROM films
+--выбрали название, жанр, продолжительность, год
+--SELECT DISTINCT year FROM films
+--вытащили года дистинктом
+--SELECT DISTINCT year FROM films ORDER BY year
+--вытащили года дистинктом и отсортировали
+--WHERE duration in (45, 90) AND genre=(
+--WHERE duration BETWEEN 66 AND 99 
+--SELECT id FROM genres 
+--WHERE title = 'фантастика' AND title = 'комедия' AND title = 'ужасы' AND title = 'мелодрама')
+--WHERE TITLE LIKE 'А___Р%' 
+-- выше в кавычках поиск от а до р (заглавные) % значит бесконеечно
+--where title not like '__д%а'
+-- выше нот лайк значит ВСЁ КРОМЕ того
+--SELECT album.Title, artist.Name FROM album INNER JOIN artist ON artist.ArtistId = album.AlbumId
+--выбрали и обьединили по принципу соответствия
+SELECT Track.Name as TrackName,
+Genre.Name as GenreName,
+Album.Title as AlbumTitle,
+Artist.Name
+FROM Track
+LEFT JOIN Genre ON Track.GenreId = Genre.GenreId
+LEFT JOIN Album ON Track.AlbumID = Album.AlbumID
+LEFT JOIN Artist ON Album.ArtistID = Artist.ArtistID
+--WHERE Artist.Name = "U2"  /*только для выбранной группы ю2*/
+ORDER BY TrackName
